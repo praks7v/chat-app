@@ -12,6 +12,6 @@ def chatrooms(request):
 @login_required
 def chatroom(request, slug):
     chatroom = ChatRoom.objects.get(slug=slug)
-    messages = Message.objects.filter(chatroom=chatroom)[0:25]
+    messages = Message.objects.filter(chatroom=chatroom)
 
     return render(request, 'chat_room/chatroom.html', {'chatroom': chatroom, 'messages': messages})
