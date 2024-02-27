@@ -107,12 +107,13 @@
         }
       };
   
-      document.querySelector('#chat-message-input').focus();
-      document.querySelector('#chat-message-input').onkeyup = function (e) {
-        if (e.keyCode === 13) {
+      document.querySelector('#chat-message-input').addEventListener('keydown', function(event) {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
           document.querySelector('#chat-message-submit').click();
         }
-      };
+      });
+      
   
       document.querySelector('#chat-message-submit').onclick = function (e) {
         e.preventDefault();
