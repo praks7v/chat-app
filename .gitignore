@@ -1,3 +1,16 @@
+# Django
+*.pyc
+*.pyo
+__pycache__/
+
+
+# Editor/IDE specific
 .vscode/
+.idea/
+
+# App specific 
+base/__pycache__/
+base/migrations/__pycache__/
 chat_room/__pycache__/
+chat_room/migrations/__pycache__/
 chatapp/__pycache__/
